@@ -7,7 +7,7 @@ import { ResultsPage } from '../pages/ResultsPage';
 const Products=['macbook','imac','samsung','lenovo'];
 
 for(const product of Products){
-test(`Verify Search Count ${product}`, async({page})=>{
+test(` @sanity Verify Search Count ${product}`, async({page})=>{
 
     const lp=new LoginPage(page) ;
     await lp.launchURL();
