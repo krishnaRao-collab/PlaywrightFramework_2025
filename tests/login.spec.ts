@@ -15,7 +15,7 @@ test('Verify Valid Credentials @login', async({page})=>{
     test.info().annotations.push({ type: 'owner', description: 'Ramakrishna G' });
     const lp=new LoginPage(page) ;
     await lp.launchURL();
-    let homePage:HomePage=await lp.doLogin('seltest4@play.com','Nokia5809');
+    let homePage:HomePage=await lp.doLogin('pwtest1@play.com','Nokia5809+');
     expect(await homePage.isUserLoggedIn()).toBeTruthy();
 })
 

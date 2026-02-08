@@ -11,7 +11,7 @@ test(` @sanity Verify Search Count ${product}`, async({page})=>{
 
     const lp=new LoginPage(page) ;
     await lp.launchURL();
-    const homePage:HomePage=await lp.doLogin('seltest4@play.com','Nokia5809');
+    const homePage:HomePage=await lp.doLogin('pwtest1@play.com','Nokia5809+');
     let resultspage:ResultsPage= await homePage.doSearch(product);
     const count=await resultspage.getSearchResultCount();
     console.log(`Products Name & count is: ${product}`,count);

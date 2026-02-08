@@ -17,7 +17,7 @@ for (const product of search) {
 
         const lp = new LoginPage(page);
         await lp.launchURL();
-        const homePage: HomePage = await lp.doLogin('seltest4@play.com', 'Nokia5809');
+        const homePage: HomePage = await lp.doLogin('pwtest1@play.com','Nokia5809+');
         let resultspage: ResultsPage = await homePage.doSearch(product.searchkey);
         let productInfoPage: ProductInfoPage = await resultspage.selectProduct(product.productname);
         expect(await productInfoPage.getProductHeader()).toBe(product.productname);
@@ -31,7 +31,7 @@ test('Verify Product MetaData', { tag: ['@product', '@sanity'] },async ({ page }
     const lp = new LoginPage(page);
     await lp.launchURL();
 
-    const homePage: HomePage = await lp.doLogin('seltest4@play.com', 'Nokia5809');
+    const homePage: HomePage = await lp.doLogin('pwtest1@play.com','Nokia5809+');
 
     const resultspage: ResultsPage = await homePage.doSearch('macbook');
     const productInfoPage: ProductInfoPage = await resultspage.selectProduct('MacBook Pro');
@@ -50,7 +50,7 @@ test('Verify Product PricingData', async ({ page }) => {
     const lp = new LoginPage(page);
     await lp.launchURL();
 
-    const homePage: HomePage = await lp.doLogin('seltest4@play.com', 'Nokia5809');
+    const homePage: HomePage = await lp.doLogin('pwtest1@play.com','Nokia5809+');
 
     const resultspage: ResultsPage = await homePage.doSearch('macbook');
     const productInfoPage: ProductInfoPage = await resultspage.selectProduct('MacBook Pro');
