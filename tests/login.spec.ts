@@ -22,7 +22,7 @@ test('Verify Valid Credentials @login', async({page})=>{
 test('Verify Invalid Credentials', async({page})=>{
     const lp=new LoginPage(page) ;
     await lp.launchURL();
-    await lp.doLogin('seltest4777@play.com','Nokia5809222');
+    await lp.doLogin('pwtest1@play8888.com','Nokia5809222');
     const errMsg=await lp.getInvalidLoginMsg();
     expect(errMsg).toContain(' Warning: No match for E-Mail Address and/or Password.');
 })
