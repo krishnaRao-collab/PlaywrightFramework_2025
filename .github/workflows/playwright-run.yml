@@ -35,13 +35,13 @@ jobs:
 
       # 6️⃣ Generate Allure HTML Report
       - name: Generate Allure Report
-         if: always()
-  run: |
-    if [ -d "allure-results" ]; then
-      npx allure@3.1.0 generate allure-results --clean -o allure-report
-    else
-      echo "Allure results folder missing, skipping report generation."
-    fi
+        if: always()
+        run: |
+          if [ -d "allure-results" ]; then
+            npx allure@3.1.0 generate allure-results --clean -o allure-report
+          else
+            echo "Allure results folder missing, skipping report generation."
+          fi
 
       # 7️⃣ Verify reports exist
       - name: Verify generated reports
@@ -146,6 +146,6 @@ jobs:
       - name: Report URLs
         run: |
           echo "Reports Published!"
-echo "Allure: https://krishnarao-collab.github.io/PlaywrightFramework_2025/allure-report/index.html"
-echo "Playwright Built-in: https://krishnarao-collab.github.io/PlaywrightFramework_2025/playwright-report/index.html"
-echo "Playwright HTML Reporter: https://krishnarao-collab.github.io/PlaywrightFramework_2025/playwright-html-report/index.html"
+          echo "Allure: https://krishnarao-collab.github.io/PlaywrightFramework_2025/allure-report/index.html"
+          echo "Playwright Built-in: https://krishnarao-collab.github.io/PlaywrightFramework_2025/playwright-report/index.html"
+          echo "Playwright HTML Reporter: https://krishnarao-collab.github.io/PlaywrightFramework_2025/playwright-html-report/index.html"
