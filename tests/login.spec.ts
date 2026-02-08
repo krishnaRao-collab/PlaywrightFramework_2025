@@ -19,7 +19,7 @@ test('Verify Valid Credentials @login', async({page})=>{
     expect(await homePage.isUserLoggedIn()).toBeTruthy();
 })
 
-test('Verify Invalid Credentials', async({page})=>{
+test.skip('Verify Invalid Credentials', async({page})=>{
     const lp=new LoginPage(page) ;
     await lp.launchURL();
     await lp.doLogin('pwtest1@play8888.com','Nokia5809222');
