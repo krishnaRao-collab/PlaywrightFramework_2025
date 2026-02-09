@@ -256,5 +256,4 @@ jobs:
           echo "   HTML:       https://krishnarao-collab.github.io/PlaywrightFramework_2025/playwright-html-report/index.html"
           echo "   Allure:     https://krishnarao-collab.github.io/PlaywrightFramework_2025/allure-report/index.html"
           echo ""
-          echo "============================================"#   t e s t   c h a n g e  
- 
+          echo "============================================"#
