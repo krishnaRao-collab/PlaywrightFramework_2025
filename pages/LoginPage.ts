@@ -22,8 +22,8 @@ constructor(page:Page){
 
 }
 
-async launchURL(){
-    await this.page.goto('https://naveenautomationlabs.com/opencart/index.php?route=account/login');
+async launchURL(baseURL: string | undefined){
+    await this.page.goto(baseURL+'?route=account/login');
 }
 
 async doLogin(email:string,password:string){

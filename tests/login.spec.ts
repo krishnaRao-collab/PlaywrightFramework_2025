@@ -1,9 +1,8 @@
-import {test,expect} from '@playwright/test';
 import {LoginPage} from '../pages/LoginPage';
 import { HomePage } from '../pages/HomePage';
+import{test,expect} from '../fixtures/baseFixtures';
 
-
-test('Verify Valid Credentials @login', async({page})=>{
+test('Verify Valid Credentials @login', async({homePage})=>{
 
     // annotation:
     // [
@@ -13,10 +12,8 @@ test('Verify Valid Credentials @login', async({page})=>{
 
     test.info().annotations.push({ type: 'feature', description: 'Login functionality' });
     test.info().annotations.push({ type: 'owner', description: 'Ramakrishna G' });
-    const lp=new LoginPage(page) ;
-    await lp.launchURL();
-    let homePage:HomePage=await lp.doLogin('pwtest1@play.com','Nokia5809+');
-    expect(await homePage.isUserLoggedIn()).toBeTruthy();
+    
+    await expect(homePage.page).toHaveTitle('My Account');
 })
 
 test.skip('Verify Invalid Credentials', async({page})=>{

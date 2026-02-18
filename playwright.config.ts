@@ -38,7 +38,15 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    headless:true
+    headless:true,
+    screenshot:'on-first-failure',
+    video:'on',
+    baseURL:'https://naveenautomationlabs.com/opencart/index.php'
+  },
+
+  metadata:{
+    appUsername:'pwtest1@play.com',
+    appPassword:'Nokia5809+',
   },
 
   /* Configure projects for major browsers */

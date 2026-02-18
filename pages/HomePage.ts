@@ -6,7 +6,7 @@ import { ResultsPage } from '../pages/ResultsPage';
 
 export class HomePage {
 
-    private readonly page: Page;
+     readonly page: Page;
     private readonly eleUtil: ElementUtil;
     private readonly Logoutlink: Locator;
     private readonly Loginlink: Locator;
