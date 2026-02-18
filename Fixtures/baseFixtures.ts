@@ -1,6 +1,7 @@
-import {test as base,expect} from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
 import { LoginPage } from '../pages/LoginPage';
+import { test as base, expect } from '@playwright/test';
+
 
 type myFixture={
     homePage:HomePage;
@@ -19,7 +20,7 @@ export const test=base.extend<myFixture>({
         const homePage=await loginPage.doLogin(username,password);
         expect(await homePage.isUserLoggedIn()).toBeTruthy();
 
-        await use(homePage);
+        await use(homePage); //giver
 
 
     }
